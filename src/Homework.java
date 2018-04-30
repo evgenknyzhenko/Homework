@@ -1,6 +1,5 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
  * Created by Евгений on 26.04.2018.
@@ -16,14 +15,14 @@ public class Homework {
 
 
     private static void task01() throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Scanner scanner = new Scanner(System.in);
 
-        int length = Integer.parseInt(reader.readLine());
-        int moveElements = Integer.parseInt(reader.readLine());
+        int length = scanner.nextInt();
+        int moveElements = scanner.nextInt();
         int[] values = new int[length];
 
         for (int i = 0; i < length; i++){
-            values[i] = Integer.parseInt(reader.readLine());
+            values[i] = scanner.nextInt();
         }
 
         int[] rotatedArray = new int[length];
@@ -38,19 +37,19 @@ public class Homework {
             }
             System.out.print(rotatedArray[i] + " ");
         }
-        reader.close();
+        scanner.close();
     }
     //=========================
 
 
     private static void task02() throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Scanner scanner = new Scanner(System.in);
 
-        int length = Integer.parseInt(reader.readLine());
+        int length = scanner.nextInt();
         int[] values = new int[length];
 
         for (int i = 0; i < length; i++){
-            values[i] = Integer.parseInt(reader.readLine());
+            values[i] = scanner.nextInt();
         }
 
         for (int i = 0; i < values.length; i++){
@@ -59,18 +58,18 @@ public class Homework {
             }
             System.out.print(values[i] + " ");
         }
-        reader.close();
+        scanner.close();
     }
     //===========================
 
     private static void task03() throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Scanner scanner = new Scanner(System.in);
 
-        int length = Integer.parseInt(reader.readLine());
+        int length = scanner.nextInt();
         int[] values = new int[length];
 
         for (int i = 0; i < length; i++){
-            values[i] = Integer.parseInt(reader.readLine());
+            values[i] = scanner.nextInt();
         }
 
         StringBuilder output = new StringBuilder();
@@ -109,7 +108,7 @@ public class Homework {
             }
         }
         System.out.println(output);
-        reader.close();
+        scanner.close();
     }
 }
 

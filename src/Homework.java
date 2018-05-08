@@ -64,7 +64,7 @@ public class Homework {
         int length = scanner.nextInt();
         int[] values = new int[length];
 
-        for (int i = 0; i < length; i++){
+        for (int i = 0; i < length; i++) {
             values[i] = scanner.nextInt();
         }
 

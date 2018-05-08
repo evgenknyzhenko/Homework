@@ -4,6 +4,7 @@ import java.util.Scanner;
 /**
  * Created by Евгений on 26.04.2018.
  */
+
 public class Homework {
     public static void main(String[] args) throws IOException {
 

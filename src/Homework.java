@@ -48,7 +48,7 @@ public class Homework {
         }
 
         for (int i = 0; i < values.length; i++) {
-            if (values[i] < 0){
+            if (values[i] < 0) {
                 values[i] = (values[i - 1] + values[i + 1]) / 2;
             }
             System.out.print(values[i] + " ");

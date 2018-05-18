@@ -26,8 +26,13 @@ public class Homework {
 
         int[] rotatedArray = new int[length];
 
-        System.arraycopy(values, 0, rotatedArray, length-moveElements, moveElements);
-        System.arraycopy(values, moveElements, rotatedArray, 0, length-moveElements);
+        for (int i = 0; i < moveElements; i++) {
+            rotatedArray[length - moveElements + i] = values[i];
+        }
+
+        for (int i = moveElements; i < length; i++) {
+            rotatedArray[i - moveElements] = values[i];
+        }
 
         for (int a : rotatedArray) {
             System.out.print(a + " ");
@@ -73,16 +78,14 @@ public class Homework {
         for (int i = 1; i < length - 1; i++) {
             if (values[i - 1] + 1 != values[i]) {
                 System.out.print("][" + values[i]);
-            }
-            else if (values[i] + 1 != values[i + 1]) {
+            } else if (values[i] + 1 != values[i + 1]) {
                 System.out.print(" " + values[i]);
             }
         }
 
         if (values[length - 2] + 1 != values[length - 1]) {
             System.out.print("][" + values[length - 1] + "]");
-        }
-        else {
+        } else {
             System.out.println(" " + values[length - 1] + "]");
         }
 
